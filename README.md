@@ -4,9 +4,14 @@ An quick & dirty dockerized compatible ipinfodb service with maxmind database.
 
 Start container
 ```
-docker-compose build
+docker run -d -it -p 5000:5000 unclesamwk/selfhosted-ipinfo-service
+```
+or with docker-compose
+```
+docker-compose pull
 docker-compose up -d
 ```
+
 Test the service with curl or in a browser
 ```
 curl "http://localhost:5000/ipinfo?ipaddress=8.8.8.8"
