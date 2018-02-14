@@ -53,6 +53,7 @@ def ipinfo():
     dict["ipAddress"] = ip
     dict["countryCode"] = response.country_short.decode("utf-8")
     dict["countryName"] = response.country_long.decode("utf-8")
+    dict["regionName"] = response.region.decode("utf-8")
     dict["cityName"] = response.city.decode("utf-8")
     dict["zipCode"] = response.zipcode.decode("utf-8")
     dict["latitude"] = response.latitude
