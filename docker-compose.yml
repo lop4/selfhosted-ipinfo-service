@@ -1,7 +1,6 @@
 selfhosted-ipinfo-service:
   container_name: selfhosted-ipinfo-service
   image: unclesamwk/selfhosted-ipinfo-service
-  build: .
   ports:
     - 5000:5000
   environment:
