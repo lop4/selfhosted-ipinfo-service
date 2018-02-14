@@ -1,10 +1,12 @@
 ### selfhosted ipinfo service
 
-An quick & dirty dockerized compatible ipinfodb service with maxmind database.
+An quick & dirty dockerized compatible ipinfodb service.
+
+Get Download Token from https://lite.ip2location.com/file-download
 
 Start container
 ```
-docker run -d -it -p 5000:5000 unclesamwk/selfhosted-ipinfo-service
+docker run -d -it -p 5000:5000 -e DOWNLOAD_TOKEN=<ip2location-download-token> unclesamwk/selfhosted-ipinfo-service
 ```
 or with docker-compose
 ```
@@ -24,8 +26,8 @@ Output:
   "ipAddress": "8.8.8.8",
   "countryCode": "US",
   "countryName": "United States",
-  "cityName": null,
-  "zipCode": null,
+  "cityName": "Mountain View",
+  "zipCode": "94043",
   "latitude": 37.751,
   "longitude": -97.822
 }
